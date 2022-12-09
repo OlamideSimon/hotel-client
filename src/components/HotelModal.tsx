@@ -73,7 +73,7 @@ const HotelModal = ({ dispatchFunc, hotel, brand, getBrands }: GetHotel) => {
               onChange={onChange}
               className={styles.input}
             />
-            <div className='space-x-3'>
+            <div className='gap-2 grid grid-cols-2'>
               <input 
                 placeholder='City'
                 value={city}
