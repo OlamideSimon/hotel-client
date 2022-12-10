@@ -49,7 +49,7 @@ function App() {
         <Header getBrands={getBrands} />
         <div className={styles.brands}>
           {data?.map(({ id, name, hotels }: Brand, index: number) => (
-            <div key={index} className='space-y-8'>
+            <div key={index} className='space-y-5'>
               <div className="flex justify-between items-center">
                 <div className="flex items-center space-x-2 w-44 sm:w-fit">
                   <p className={styles.brand}>{name}</p>
@@ -62,7 +62,7 @@ function App() {
               </div>
 
               {/* Hotel cards */}
-              <div className='flex overflow-x-auto px-5 max-h-48'>
+              <div className='flex overflow-x-auto max-h-48'>
                   {hotels?.length !== 0 ? (
                       <>
                           {hotels?.map((hotel, index) => (
