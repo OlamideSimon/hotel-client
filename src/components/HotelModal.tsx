@@ -1,4 +1,5 @@
 import React, { FormEvent, useEffect, useState } from 'react'
+import Modal from '../hoc/Modal'
 import { handleError } from '../utils/error'
 import { GetHotel } from '../utils/interface'
 import { newHotel, updateHotel } from '../utils/requests'
@@ -54,53 +55,49 @@ const HotelModal = ({ dispatchFunc, hotel, brand, getBrands }: GetHotel) => {
   if (loading || updateLoading) console.log('loading...')
 
   return (
-    <div className={styles.bg}>
-      <div className={styles.center}>
-        <div className={styles.modal}>
-          <p className='text-2xl text-slate-600 text-center'>Edit Hotel</p>
-          <form className='grid py-5 gap-3' onSubmit={onSubmit}>
-            <input 
-              placeholder='Enter Name of Hotel'
-              value={name}
-              name='name'
-              onChange={onChange}
-              className={styles.input}
-            />
-            <input 
-              placeholder='Address'
-              value={address}
-              name='address'
-              onChange={onChange}
-              className={styles.input}
-            />
-            <div className='gap-2 grid grid-cols-2'>
-              <input 
-                placeholder='City'
-                value={city}
-                name='city'
-                onChange={onChange}
-                className={styles.input}
-              />
-              <input 
-                placeholder='Country'
-                value={country}
-                name='country'
-                onChange={onChange}
-                className={styles.input}
-              />
-            </div>
-            <div className='flex justify-end space-x-3'>
-              <button onClick={dispatchFunc} className={styles.cancelBtn} disabled={loading || updateLoading}>
-                Cancel
-              </button>
-              <button type='submit' className={styles.saveBtn} disabled={loading || updateLoading}>
-                Save
-              </button>
-            </div>
-          </form>
+    <Modal>
+      <p className='text-2xl text-slate-600 text-center'>Edit Hotel</p>
+      <form className='grid py-5 gap-3' onSubmit={onSubmit}>
+        <input 
+          placeholder='Enter Name of Hotel'
+          value={name}
+          name='name'
+          onChange={onChange}
+          className={styles.input}
+        />
+        <input 
+          placeholder='Address'
+          value={address}
+          name='address'
+          onChange={onChange}
+          className={styles.input}
+        />
+        <div className='gap-2 grid grid-cols-2'>
+          <input 
+            placeholder='City'
+            value={city}
+            name='city'
+            onChange={onChange}
+            className={styles.input}
+          />
+          <input 
+            placeholder='Country'
+            value={country}
+            name='country'
+            onChange={onChange}
+            className={styles.input}
+          />
         </div>
-      </div>
-    </div>
+        <div className='flex justify-end space-x-3'>
+          <button onClick={dispatchFunc} className={styles.cancelBtn} disabled={loading || updateLoading}>
+            Cancel
+          </button>
+          <button type='submit' className={styles.saveBtn} disabled={loading || updateLoading}>
+            Save
+          </button>
+        </div>
+      </form>
+    </Modal>
   )
 }
 

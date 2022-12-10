@@ -62,7 +62,7 @@ function App() {
               </div>
 
               {/* Hotel cards */}
-              <div className='flex overflow-x-auto px-5 max-h-48 space-x-4'>
+              <div className='flex overflow-x-auto px-5 max-h-48'>
                   {hotels?.length !== 0 ? (
                       <>
                           {hotels?.map((hotel, index) => (
