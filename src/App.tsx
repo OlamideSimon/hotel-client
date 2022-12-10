@@ -49,7 +49,7 @@ function App() {
         <Header getBrands={getBrands} />
         <div className={styles.brands}>
           {data?.map(({ id, name, hotels }: Brand, index: number) => (
-            <div key={index} className='space-y-3'>
+            <div key={index} className='space-y-8'>
               <div className="flex justify-between items-center">
                 <div className="flex items-center space-x-2 w-44 sm:w-fit">
                   <p className={styles.brand}>{name}</p>
@@ -120,7 +120,7 @@ const styles = {
   addHotel: 'border-blue-500 border p-1 rounded text-sm',
   icons: 'w-4 cursor-pointer',
   brand: "font-medium text-xl truncate",
-  brands: "box-border py-10 px-3 md:py-20 md:px-36 space-y-10",
+  brands: "box-border py-10 px-3 md:py-20 md:px-36 space-y-20",
   emptyHotel: 'w-full grid place-content-center text-slate-400 text-sm',
   deleteHeading: 'text-3xl text-slate-600 px-2',
   deleteSubheading: 'box-border pb-5 pt-2 text-slate-500',

@@ -75,7 +75,7 @@ export default Hotel
 
 const styles = {
   blackBg: 'bg-black text-white p-5 w-full text-center h-full bg-opacity-40 rounded-xl',
-  card: 'min-w-[300px] shadow-md bg-card-bg bg-cover rounded-xl mx-5',
+  card: 'min-w-[300px] shadow-md bg-card-bg bg-cover rounded-xl mx-5 box-border',
   editBtn: 'py-1 px-3 rounded-full border hover:bg-green-500 hover:transition-all hover:duration-500 hover:border-transparent',
   deleteBtn: 'py-1 px-3 rounded-full border hover:bg-red-500 hover:transition-all hover:duration-500 hover:border-transparent',
   name: 'text-center text-2xl font-semibold mb-2 w-full truncate',
